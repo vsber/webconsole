@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<div class="container my-5">
+  <main class="hds-content" role="main">
+    <h1 class="hds-title" id="content">{{ page.title | smartify }}</h1>
+    <p class="hds-lead">{{ page.description | smartify }}</p>
+    {% include ads.html %}
+    {{ content }}
+  </main>
+</div>

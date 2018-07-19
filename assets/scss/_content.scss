@@ -1,0 +1,70 @@
+// stylelint-disable no-duplicate-selectors, selector-max-combinators, selector-max-compound-selectors, selector-max-type, selector-no-qualifying-type
+
+//
+// Automatically style Markdown-based tables like a Bootstrap `.table`.
+//
+
+// by vsber
+.hds-module-header{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 4.375rem;
+  padding-left: 1.25rem;
+  margin: -1rem -1rem 1rem;
+  background: #f9fafb;
+  border-bottom: 1px solid #eee;
+  .header-flag{
+    display: inline-block;
+    width: .25rem;
+    height: 1.25rem;
+    vertical-align: middle;
+    background-image: linear-gradient(0deg, #33aaf7, #00c4e2);
+    border-radius: .125rem;
+  }
+  .title{
+    display: inline-block;
+    height: 4.375rem;
+    font-size: 1.125rem;//18px
+    line-height: 4.375rem;
+    color: #373d41;
+    vertical-align: middle;
+  }
+}
+@keyframes rotation{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(359deg);
+  }
+}
+.hds-alert{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 20;
+  min-width: 200px;
+  margin-bottom: 0;
+  margin-left: -200px;
+  border: medium none;
+
+  .spinner,
+  .spinner-small {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px -20px 0 0;
+    border: 2px solid #fff;
+    border-top: 2px solid #00c1de;
+    border-radius: 100%;
+  }
+
+  .fade.in .spinner,
+  .fade.in .spinner-small {
+    animation: rotation .6s infinite linear;
+  }
+
+}

@@ -1,0 +1,248 @@
+
+//override variable value
+$font-size-base:    .875rem !default;
+$font-size-sm:       .75rem !default;
+$font-size-lg:       1rem !default;
+
+$hds-cyan: #00c1de;
+$primary: $hds-cyan !default;
+$third: #f5f5f6;
+$third-border-color: #d7d8d9;
+
+$theme-colors: (
+  "primary":  $hds-cyan,
+) !default;
+
+$input-btn-padding-y-mid:      .375rem !default;
+$input-btn-padding-x-mid:      1rem !default;
+$btn-padding-x-mid: $input-btn-padding-x-mid;
+$btn-padding-y-mid: $input-btn-padding-y-mid;
+$input-padding-y-mid: $input-btn-padding-y-mid;
+$input-padding-x-mid: $input-btn-padding-x-mid;
+
+$enable-rounded:   false !default;
+
+$input-btn-focus-box-shadow:  0 !default;
+$btn-active-box-shadow:      0  !default;
+$input-btn-focus-width:       0 !default;
+
+$input-placeholder-color:   #aaabb6!default;
+
+
+//load bootstrap
+@import "../../../scss/bootstrap";
+
+.btn-third {
+  font-weight: 300;
+  @include button-variant($third, $third-border-color, #fff, #c3c5c6, $primary, transparent);
+}
+
+html{
+  height:100%
+}
+.html-gray{
+  background-color: #373d41!important;
+}
+//font-smoothing 比较特殊是非标准的CSS定义
+body {
+  font-size: $font-size-base;
+  font-weight: $font-weight-light;
+  font-family: Helvetica Neue,Helvetica,Tahoma,Arial,Microsoft YaHei,PingFang SC;
+  -webkit-font-smoothing: antialiased;/*chrome、safari*/
+  -moz-osx-font-smoothing: grayscale;/*firefox*/
+}
+a:focus{
+  text-decoration: none;
+  outline-style: none;
+}
+.btn-mid {
+  @include button-size($btn-padding-y-mid, $btn-padding-x-mid, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+
+.form-control-mid {
+  padding: $input-padding-y-mid $input-padding-x-mid;
+  font-size: $font-size-sm;
+  line-height: $input-line-height-sm;
+  @include border-radius($input-border-radius-sm);
+}
+
+select.form-control-mid {
+  &:not([size]):not([multiple]) {
+    height: $input-height-sm;
+  }
+}
+
+.table {
+  .hds-thead-light{
+    th {
+      color: #373d41;
+      font-weight: 400;
+      background-color: #f5f5f6;
+      border-bottom: 1px solid #ebecec;
+      border-top: 0;
+    }
+  }
+}
+
+.hds-table-light {
+  table-layout: fixed;
+  font-size: .75rem;
+  font-weight: 400;
+  color: #666;
+  background-color: #fff;
+  margin-bottom: 0;
+
+  th,
+  td,
+  thead th {
+    border-color: #ebecec;
+  }
+  tbody th,
+  tbody td{
+    border-top: 0;
+    border-bottom: 1px solid #ebecec;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+
+  &.table-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: #f9f9fa;
+    }
+  }
+
+  &.table-hover {
+    tbody tr {
+      @include hover {
+        background-color: #f9f9fa;
+      }
+    }
+  }
+}
+
+.hds-pagination{
+  font-size: .75rem;
+  background-color: #f5f5f6;
+  border: 1px solid #e6ebef;
+  border-top: none;
+  .hds-page-info{
+    height: 1.75rem;
+    line-height: 1.75rem;
+  }
+}
+
+
+.hds-login{
+  background-color: #1F2325;
+  background-image: url(../../img/bg-2880-1280.jpg);
+  background-size: cover;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+  .login-topbar{
+    height: 60px;
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    .navbar-brand{
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+  }
+  .login-body{
+    padding: 74px 0 118px;
+    .login-body-box{
+      width: 960px;
+      margin: auto;
+      position: relative;
+      height: 380px;
+      .login-module{
+         width: 380px;
+         height: 380px;
+         padding-top: 20px;
+         border: none;
+         position: absolute;
+         right: 0;
+
+         @include media-breakpoint-down(md) {
+           position: relative;
+           margin: auto;
+         }
+         @include media-breakpoint-down(sm) {
+           position: relative;
+           margin-left: 50px;
+         }
+
+         .login-wrap{
+           background-color: #fff;
+           width: 380px;
+           padding: 24px;
+           border: none;
+           position: absolute;
+           right: 0;
+           .title{
+             height: 2.5rem;
+             font-size: 1.125rem;
+             font-weight: 400;
+             color: #373D41;
+             line-height: 1.5rem;
+           }
+           .form-control{
+             padding: 0 .75rem;
+             line-height: 2.5rem;
+             font-size: .75rem;
+           }
+
+         }
+      }
+    }
+  }
+}
+
+
+
+.hds-login-footer {
+  font-size: .875rem;
+  text-align: center;
+  background-color: #373d41;
+
+  a {
+    font-weight: 400;
+    color: #9b9ea0;
+
+    &:hover,
+    &:focus {
+      color: $link-color;
+    }
+  }
+  .hds-login-footer-links{
+    font-size: 1rem;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+  .copyright{
+    color: #73777a;
+    font-weight: 400;
+  }
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+  }
+}
+
+.hds-login-footer-links {
+  padding-left: 0;
+  margin-bottom: 1rem;
+
+  li {
+    display: inline-block;
+
+    + li {
+      margin-left: 1rem;
+    }
+  }
+}

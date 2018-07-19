@@ -1,0 +1,53 @@
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row hds-navbar">
+  <a class="navbar-brand  mr-0 mx-md-2" href="{{ site.baseurl }}/" aria-label="Bootstrap">
+    {%- include icons/bootstrap.svg width="24" height="24" class="d-block" -%}
+  </a>
+  <a class="navbar-brand" href="{{ site.baseurl }}/" aria-label="Bootstrap">
+    资料处理入库子系统
+  </a>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li class="nav-item">
+      <a class="nav-link {% if page.layout == "home" %}{% endif %}" href="{{ site.baseurl }}/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'test');">主页</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ site.baseurl }}/hds/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'test');">管理</a>
+    </li>
+    <li class="nav-item dropdown hds-nav-item-dropdow">
+      <a class="nav-item nav-link " id="dir" href="#"  aria-haspopup="true" aria-expanded="false">
+        目录配置
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dir">
+        <a class="dropdown-item active" href="#">角色管理</a>
+        <a class="dropdown-item" href="#">用户管理</a>
+        <a class="dropdown-item" href="#">资源管理</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">系统配置</a>
+        <a class="dropdown-item" href="#">调度任务</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown hds-nav-item-dropdow">
+      <a class="nav-item nav-link " href="#" id="jobs" aria-haspopup="true" aria-expanded="false">
+        作业配置
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="jobs">
+        <a class="dropdown-item active" href="#">角色管理</a>
+        <a class="dropdown-item" href="#">用户管理</a>
+        <a class="dropdown-item" href="#">资源管理</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">系统配置</a>
+        <a class="dropdown-item" href="#">调度任务</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown hds-nav-item-dropdow">
+      <a class="user-box" href="#" id="user-box" target="_blank" rel="noopener" aria-label="something">
+        <img class="nav-user-avatar" alt="" src="https://oss.aliyuncs.com/aliyun_id_photo_bucket/default_handsome.jpg" >
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-box">
+        <a class="dropdown-item" href="#">个人信息</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/hds/login/">退出系统</a>
+      </div>
+    </li>
+  </ul>
+</header>
