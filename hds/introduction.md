@@ -4,7 +4,7 @@ title:
 description:
 group: getting-started
 redirect_from:
-  - /hds/
+  - /introduction/
 ---
 
 <div class='hds-module-header'>
