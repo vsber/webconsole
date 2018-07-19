@@ -41,7 +41,7 @@ redirect_from:
       <tbody>
         <tr>
           <th scope="row">1</th>
-          <td>华北气象中心</td>
+          <td>单位或公司</td>
           <td>系统管理员</td>
           <td>系统管理和维护</td>
           <td>
@@ -52,7 +52,7 @@ redirect_from:
         </tr>
         <tr>
           <th scope="row">2</th>
-          <td>华北气象中心</td>
+          <td>单位或公司</td>
           <td>观测员</td>
           <td>观测</td>
           <td>
@@ -63,7 +63,7 @@ redirect_from:
         </tr>
         <tr>
           <th scope="row">3</th>
-          <td>华北气象中心</td>
+          <td>单位或公司</td>
           <td>观测员3</td>
           <td>观测</td>
           <td>
@@ -74,7 +74,7 @@ redirect_from:
         </tr>
         <tr>
           <th scope="row">4</th>
-          <td>华北气象中心</td>
+          <td>单位或公司</td>
           <td>观测员4</td>
           <td>观测</td>
           <td>
@@ -85,7 +85,7 @@ redirect_from:
         </tr>
         <tr>
           <th scope="row">5</th>
-          <td>华北气象中心</td>
+          <td>单位或公司</td>
           <td>观测员5</td>
           <td>观测</td>
           <td>
